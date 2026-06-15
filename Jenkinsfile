@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Clone Repository') {
       steps {
-        git 'https://github.com/Aryan-jaiswa/Maven-App.git'
+        git branch: 'main',
+        url: 'https://github.com/Aryan-jaiswa/Maven-App.git'
       }
     }
     stage('Check Java Version')  { steps { sh 'java -version'    } }
